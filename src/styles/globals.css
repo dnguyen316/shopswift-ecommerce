@@ -29,6 +29,126 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    /* Custom Theme */
+
+    /* Begin  -- State Colors --*/
+    /* warning color palette */
+    --warning-50: 47 100% 96%;
+    --warning-100: 48 93% 89%;
+    --warning-200: 48 94% 75%;
+    --warning-300: 48 96% 63%;
+    --warning-400: 48 96% 54%;
+    --warning-500: 36 93% 52%;
+    --warning-600: 35 73% 45%;
+    --warning-700: 28 74% 37%;
+    --warning-800: 26 73% 32%;
+    --warning-900: 25 67% 27%;
+
+    /* success color palette */
+    --success-50: 152 91% 95%;
+    --success-100: 144 75% 91%;
+    --success-200: 147 70% 83%;
+    --success-300: 148 77% 73%;
+    --success-400: 152 67% 54%;
+    --success-500: 160 67% 36%;
+    --success-600: 158 90% 32%;
+    --success-700: 164 94% 26%;
+    --success-800: 163 74% 21%;
+    --success-900: 163 74% 21%;
+
+    /* error color palette */
+    --error-50: 342 100% 97%;
+    --error-100: 342 84% 94%;
+    --error-200: 344 92% 88%;
+    --error-300: 346 90% 82%;
+    --error-400: 347 87% 73%;
+    --error-500: 348 91% 65%;
+    --error-600: 351 77% 49%;
+    --error-700: 350 72% 41%;
+    --error-800: 349 85% 36%;
+    --error-900: 348 90% 30%;
+
+    /* Primary color palette */
+    --primary-1: 0 0% 100%;
+    --primary-2: 216 1% 22%;
+
+    /* Text colors */
+    --text-1: 21 68% 53%;
+    --text-2: 21 68% 53%;
+    --button-card: 21 68% 53%;
+
+    /* Secondary color palette */
+    --secondary-1: 0 0% 96%;
+    --secondary-2: 44 95% 97%;
+    --secondary-3: 0 76% 54%;
+
+    /* Background color */
+    --bg-1: 0 0% 100%;
+
+    /* Other colors */
+    --button-1: 149 60% 40%;
+    --button-2: 0 76% 54%;
+    --hover-button-1: 36 72% 57%;
+    --hover-button-2: 353 82% 66%;
+
+    /* Logo color */
+    --logo-color: 0 76% 54%;
+
+    /* Additional colors */
+    --neutral-0: 0 0% 100%;
+    --neutral-50: 240 10% 96%;
+    --neutral-100: 240 11% 92%;
+    --neutral-200: 230 24% 84%;
+    --neutral-300: 216 13% 62%;
+    --neutral-400: 222 18% 37%;
+    --neutral-500: 222 57% 20%;
+    --neutral-600: 222 71% 14%;
+
+    --blue-100: 227 100% 98%;
+    --blue-200: 223 75% 95%;
+    --blue-300: 217 65% 84%;
+    --blue-400: 222 73% 72%;
+    --blue-500: 222 78% 62%;
+    --blue-600: 225 73% 49%;
+    --blue-700: 226 78% 40%;
+
+    --purple-100: 261 100% 98%;
+    --purple-200: 267 64% 94%;
+    --purple-300: 263 58% 81%;
+    --purple-400: 264 66% 69%;
+    --purple-500: 264 70% 64%;
+    --purple-600: 263 52% 49%;
+
+    --magenta-100: 341 94% 98%;
+    --magenta-200: 337 66% 94%;
+    --magenta-300: 329 80% 87%;
+    --magenta-400: 340 79% 75%;
+    --magenta-500: 340 75% 63%;
+    --magenta-600: 340 69% 55%;
+
+    --green-100: 155 86% 96%;
+    --green-200: 150 76% 92%;
+    --green-300: 153 47% 80%;
+    --green-400: 152 60% 67%;
+    --green-500: 154 65% 57%;
+    --green-600: 155 68% 45%;
+
+    --red-100: 350 84% 96%;
+    --red-200: 351 77% 91%;
+    --red-300: 350 78% 84%;
+    --red-400: 350 82% 72%;
+    --red-500: 352 80% 59%;
+    --red-600: 352 72% 46%;
+
+    --yellow-100: 39 100% 97%;
+    --yellow-200: 39 94% 92%;
+    --yellow-300: 41 100% 83%;
+    --yellow-400: 36 100% 69%;
+    --yellow-500: 32 91% 54%;
+    --yellow-600: 29 80% 43%;
+
+    /*End -- Custom Theme */
   }
 
   .dark {
@@ -56,6 +176,59 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    /* Adding Custom Theme */
+    --neutral-0: #ffffff;
+    --neutral-50: #f4f4f6;
+    --neutral-100: #e9eaec;
+    --neutral-200: #d1d4db;
+    --neutral-300: #9096a2;
+    --neutral-400: #4d566b;
+    --neutral-500: #202c46;
+    --neutral-600: #1b253c;
+
+    --blue-100: #f5f7fe;
+    --blue-200: #eaeffd;
+    --blue-300: #adbef7;
+    --blue-400: #5a7dee;
+    --blue-500: #315cea;
+    --blue-600: #2a4ec7;
+    --blue-700: #2240a4;
+
+    --purple-100: #f8f5fe;
+    --purple-200: #f1ecfc;
+    --purple-300: #c9b2f3;
+    --purple-400: #9265e8;
+    --purple-500: #773fe2;
+    --purple-600: #6436bf;
+
+    --magenta-100: #fef6f8;
+    --magenta-200: #fceef1;
+    --magenta-300: #f4bac8;
+    --magenta-400: #e97991;
+    --magenta-500: #e35275;
+    --magenta-600: #c24764;
+
+    --green-100: #f4fdf7;
+    --green-200: #e9faef;
+    --green-300: #a9ebbf;
+    --green-400: #52d880;
+    --green-500: #27ce60;
+    --green-600: #21af52;
+
+    --red-100: #fce9ec;
+    --red-200: #f9d2d9;
+    --red-300: #f2a6b4;
+    --red-400: #e9677f;
+    --red-500: #df2648;
+    --red-600: #b71f3b;
+
+    --yellow-100: #fef3e6;
+    --yellow-200: #fde7cd;
+    --yellow-300: #fccc9c;
+    --yellow-400: #fab261;
+    --yellow-500: #f89118;
+    --yellow-600: #c77414;
   }
 }
 
