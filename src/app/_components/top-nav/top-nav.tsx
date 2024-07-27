@@ -17,12 +17,7 @@ import { type MenuItem, menuList } from "./menu-item";
 import Logo from "./logo/logo";
 import SearchComponent from "./search/search";
 import { Button } from "@/app/components/ui/button";
-import {
-  Heart,
-  LucideShoppingCart,
-  ShoppingBag,
-  ShoppingCart,
-} from "lucide-react";
+import { Heart, LucideShoppingCart } from "lucide-react";
 
 const TopNav = () => {
   return (
@@ -32,7 +27,7 @@ const TopNav = () => {
         <NavigationMenu className="container">
           <NavigationMenuList>
             {menuList.map((item: MenuItem) => (
-              <NavigationMenuItem key={item.key}>
+              <NavigationMenuItem key={item.id}>
                 <Link href={item.href} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     {item.title}

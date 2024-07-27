@@ -1,3 +1,5 @@
+import crypto from "crypto";
+
 export type MenuItem = {
   id: string;
   title: string;
@@ -7,25 +9,25 @@ export type MenuItem = {
 
 const menuList: MenuItem[] = [
   {
-    id: "39rh319tfhqwfhwfaggega",
+    id: crypto.randomBytes(64).toString("hex"),
     title: "Home",
     href: "/",
     description: "Homepage",
   },
   {
-    id: "39203tgsogohgh3qogqgqavn2130r",
+    id: crypto.randomBytes(64).toString("hex"),
     title: "Contact",
     href: "/contact",
     description: "Contact Page",
   },
   {
-    id: "3qwfhuofhq98fh3qh9f3qhf9qhfoqh",
+    id: crypto.randomBytes(64).toString("hex"),
     title: "About",
     href: "/about",
     description: "About Page",
   },
   {
-    id: "r231qr2r3rf3f32_ofthn32ofnh32o",
+    id: crypto.randomBytes(64).toString("hex"),
     title: "Sign Up",
     href: "/sign-up",
     description: "Sign-up Page",
