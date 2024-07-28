@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <HydrateClient>
       <div className="container">
-        <div className="flex">
+        <div className="flex gap-[45px]">
           <CategoriesMenu />
           <Hero />
         </div>
