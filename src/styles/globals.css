@@ -71,26 +71,27 @@
 
     /* Primary color palette */
     --primary-1: 0 0% 100%;
-    --primary-2: 216 1% 22%;
+    --primary-2: 210 2% 22%;
 
     /* Text colors */
-    --text-1: 21 68% 53%;
-    --text-2: 21 68% 53%;
+    --text-foreground: 0 0 98%;
+    --text-1: 206 3% 50%;
+    --text-2: 0 0 0;
     --button-card: 21 68% 53%;
 
     /* Secondary color palette */
-    --secondary-1: 0 0% 96%;
-    --secondary-2: 44 95% 97%;
-    --secondary-3: 0 76% 54%;
+    --secondary-1: 42 87% 97%;
+    --secondary-2: 0 68% 56%;
 
     /* Background color */
     --bg-1: 0 0% 100%;
 
     /* Other colors */
-    --button-1: 149 60% 40%;
-    --button-2: 0 76% 54%;
-    --hover-button-1: 36 72% 57%;
-    --hover-button-2: 353 82% 66%;
+    --button: 0 0 0;
+    --button-1: 144 100% 50%;
+    --button-2: 0 68% 56%;
+    --hover-button-1: 0 63% 67%;
+    --hover-button-2: 214 51% 75%;
 
     /* Logo color */
     --logo-color: 0 76% 54%;

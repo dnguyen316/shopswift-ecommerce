@@ -13,7 +13,6 @@ import "./custom-swiper.css";
 const Hero = () => {
   return (
     <Swiper
-      // install Swiper modules
       modules={[Pagination, A11y]}
       spaceBetween={50}
       slidesPerView={1}

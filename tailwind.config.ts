@@ -96,9 +96,11 @@ module.exports = {
         text: {
           1: "hsl(var(--text-1))",
           2: "hsl(var(--text-2))",
+          foreground: "hsl(var(--text-foreground))",
           "button-card": "hsl(var(--button-card))",
         },
         button: {
+          DEFAULT: "hsl(var(--button))",
           1: "hsl(var(--button-1))",
           2: "hsl(var(--button-2))",
           "hover-1": "hsl(var(--hover-button-1))",
