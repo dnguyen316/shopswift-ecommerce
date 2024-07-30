@@ -2,6 +2,8 @@ import { api, HydrateClient } from "@/trpc/server";
 import CategoriesMenu from "./_components/categories-menu/categories-menu";
 import Hero from "./_components/hero/hero";
 import ProductCard from "./_components/product-card/product-card";
+import SectionWrapper from "./_components/section-wrapper/section-wrapper";
+import { Separator } from "./components/ui/separator";
 
 export default async function Home() {
   void api.post.getLatest.prefetch();
@@ -13,8 +15,18 @@ export default async function Home() {
           <CategoriesMenu />
           <Hero />
         </div>
-        <main className="flex min-h-screen flex-col items-center justify-center">
-          <ProductCard />
+        <main className="min-h-screen">
+          {/* Flash Sales Section */}
+          <SectionWrapper title="Flash Sales" subtitle="Today's">
+            <ProductCard />
+          </SectionWrapper>
+
+          <Separator />
+
+          {/* Category Section */}
+          <SectionWrapper title="Browse By Category" subtitle="Category">
+            <ProductCard />
+          </SectionWrapper>
         </main>
       </div>
     </HydrateClient>
