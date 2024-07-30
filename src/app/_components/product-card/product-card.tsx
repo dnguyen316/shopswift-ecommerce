@@ -17,35 +17,38 @@ const ProductCard = () => {
   const [ratingReview, _] = useState(3);
 
   return (
-    <Card className="min-h-[350px] w-[270px] hover:cursor-pointer">
+    <Card className="hover group min-h-[350px] w-[270px] hover:cursor-pointer">
       <CardHeader className="relative flex h-[250px] items-center justify-between bg-secondary p-0 pt-7">
-        <Button className="text-text-foreground absolute left-3 top-3 h-[26px] w-[55px] text-[12px] font-normal">
+        <Button className="absolute left-3 top-3 h-[26px] w-[55px] pb-1 text-[12px] font-normal text-text-foreground hover:bg-primary">
           -40%
         </Button>
-        <div>
-          <Button className="">
-            <HeartIcon />
+        <div className="absolute right-3 top-3">
+          <Button className="mb-2 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-background p-0 hover:bg-button-hover-1">
+            <HeartIcon color="#000000" />
           </Button>
-          <Button>
-            <EyeIcon />
+          <Button className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-background p-0 hover:bg-button-hover-1">
+            <EyeIcon color="#000000" />
           </Button>
         </div>
         <Image
           src="/controller.png"
           width={190}
           height={100}
+          className="pt-4"
           alt="controller"
         />
-        <Button className="bg-button w-full rounded-t-none">Add To Cart</Button>
+        <Button className="w-full translate-y-[27px] rounded-t-none bg-button opacity-0 transition-all duration-300 group-hover:translate-y-[0] group-hover:opacity-100">
+          Add To Cart
+        </Button>
       </CardHeader>
-      <CardContent className="p-[16px]">
+      <CardContent className="z-10 p-[16px]">
         <CardTitle className="pb-2 text-[16px] font-medium">
           HAVIT HV-G92 Gamepad
         </CardTitle>
         <CardDescription>
           <div className="pb-2 text-[16px] font-medium text-secondary-2">
             $120{" "}
-            <span className="text-button ml-3 inline-block line-through decoration-1 opacity-[50%]">
+            <span className="ml-3 inline-block text-button line-through decoration-1 opacity-[50%]">
               $160
             </span>
           </div>

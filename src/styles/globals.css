@@ -244,18 +244,3 @@
       "calt" 1;
   }
 }
-
-@layer utilities {
-  .swiper-pagination-bullet {
-    color: var(--text-1);
-  }
-
-  .swiper-pagination-bullet-active {
-    color: #fff;
-    background: var(--secondary-2);
-  }
-}
-
-.swiper-pagination-bullet-active {
-  @apply bg-secondary-2 text-primary-1;
-}
