@@ -6,6 +6,7 @@ import { type Metadata } from "next";
 import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
 import TopNav from "./_components/top-nav/top-nav";
+import { Suspense } from "react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,8 +33,10 @@ export default function RootLayout({
     >
       <body>
         <TRPCReactProvider>
-          <TopNav />
-          {children}
+          <Suspense>
+            <TopNav />
+            {children}
+          </Suspense>
         </TRPCReactProvider>
       </body>
     </html>
