@@ -10,10 +10,11 @@ import ProductCard from "../product-card/product-card";
 import { useCustomCarousel } from "../custom-carousel/create-context";
 
 interface CustomCarouselProps extends SwiperProps {
-  productList: [];
+  children: React.ReactNode;
 }
 
 const CustomCarousel = (props: CustomCarouselProps) => {
+  const { children } = props;
   const { setSwiper } = useCustomCarousel();
 
   return (
@@ -24,32 +25,11 @@ const CustomCarousel = (props: CustomCarouselProps) => {
       className="mySwiper"
       onSwiper={(swiper) => setSwiper(swiper)}
     >
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductCard />
-      </SwiperSlide>
+      {children}
     </Swiper>
   );
 };
+
+export const CustomSlide = SwiperSlide;
 
 export default CustomCarousel;

@@ -6,6 +6,7 @@ import SectionWrapper from "./_components/section-wrapper/section-wrapper";
 import { Separator } from "./components/ui/separator";
 import ProductList from "./_components/product-list/product-list";
 import { Button } from "./components/ui/button";
+import CategoriesList from "./_components/categories-list/categories-list";
 
 export default async function Home() {
   void api.post.getLatest.prefetch();
@@ -34,7 +35,7 @@ export default async function Home() {
 
           {/* Category Section */}
           <SectionWrapper title="Browse By Category" subtitle="Category">
-            <ProductCard />
+            <CategoriesList />
           </SectionWrapper>
         </main>
       </div>

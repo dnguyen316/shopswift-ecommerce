@@ -2,12 +2,9 @@
 
 import React from "react";
 import crypto from "crypto";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
