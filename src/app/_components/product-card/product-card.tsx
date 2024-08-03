@@ -10,18 +10,24 @@ import {
 } from "@/app/components/ui/card";
 import Rating from "@/app/components/ui/custom-components/rating/rating";
 import { EyeIcon, HeartIcon } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+import { CldImage } from "next-cloudinary";
+import React from "react";
 
-const ProductCard = () => {
-  const [ratingReview, _] = useState(3);
+type ProductCardProps = {
+  productInfo: ProductType;
+};
+
+const ProductCard: React.FC<ProductCardProps> = ({ productInfo }) => {
+  // const [ratingReview, _] = useState(3);
 
   return (
-    <Card className="hover group min-h-[350px] w-[270px] hover:cursor-pointer">
+    <Card className="hover group h-[350px] w-[270px] hover:cursor-pointer">
       <CardHeader className="relative flex h-[250px] items-center justify-between bg-secondary p-0 pt-7">
-        <Button className="absolute left-3 top-3 h-[26px] w-[55px] pb-1 text-[12px] font-normal text-text-foreground hover:bg-primary">
-          -40%
-        </Button>
+        {productInfo?.discount && (
+          <Button className="absolute left-3 top-3 h-[26px] w-[55px] pb-1 text-[12px] font-normal text-text-foreground hover:bg-primary">
+            {productInfo.discount}%
+          </Button>
+        )}
         <div className="absolute right-3 top-3">
           <Button className="mb-2 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-background p-0 hover:bg-button-hover-1">
             <HeartIcon color="#000000" />
@@ -30,12 +36,12 @@ const ProductCard = () => {
             <EyeIcon color="#000000" />
           </Button>
         </div>
-        <Image
-          src="/controller.png"
-          width={190}
+        <CldImage
+          src={productInfo.thumb}
+          width={100}
           height={100}
-          className="pt-4"
-          alt="controller"
+          className="object-contain pt-4"
+          alt={productInfo.name}
         />
         <Button className="w-full translate-y-[10px] rounded-t-none bg-button opacity-0 transition-all duration-300 group-hover:translate-y-[0] group-hover:opacity-100">
           Add To Cart
@@ -43,17 +49,17 @@ const ProductCard = () => {
       </CardHeader>
       <CardContent className="z-10 p-[16px]">
         <CardTitle className="pb-2 text-[16px] font-medium">
-          HAVIT HV-G92 Gamepad
+          {productInfo.name}
         </CardTitle>
         <CardDescription>
           <div className="pb-2 text-[16px] font-medium text-secondary-2">
-            $120{" "}
+            ${Math.floor((productInfo.price * productInfo.discount) / 100)}{" "}
             <span className="ml-3 inline-block text-button line-through decoration-1 opacity-[50%]">
-              $160
+              ${productInfo.price}
             </span>
           </div>
           <div className="flex items-center gap-1">
-            <Rating value={ratingReview} readOnly />
+            <Rating value={Math.ceil(productInfo.ratings_avg)} readOnly />
             <span className="pb-1 font-semibold text-text-2 opacity-[50%]">
               {`(`}75{`)`}
             </span>

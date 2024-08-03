@@ -5,5 +5,5 @@
 }
 
 .swiper-slide {
-  width: 270px;
+  width: 270px !important;
 }

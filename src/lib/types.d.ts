@@ -5,6 +5,7 @@ type ProductType = {
   description: string;
   slug: string;
   price: number;
+  discount: number;
   quantity: number;
   shop: object;
   type: "Electronics" | "Clothing" | "Furniture";
