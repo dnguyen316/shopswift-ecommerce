@@ -45,8 +45,8 @@ const ComputerIcon: React.FC<ComputerIconProp> = ({ color }) => {
         <path
           d="M8 32H48"
           stroke={color ?? "black"}
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
       </g>
       <defs>

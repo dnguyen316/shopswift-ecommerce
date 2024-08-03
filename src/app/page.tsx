@@ -34,7 +34,11 @@ export default async function Home() {
           <Separator />
 
           {/* Category Section */}
-          <SectionWrapper title="Browse By Category" subtitle="Category">
+          <SectionWrapper
+            className="relative"
+            title="Browse By Category"
+            subtitle="Category"
+          >
             <CategoriesList />
           </SectionWrapper>
         </main>

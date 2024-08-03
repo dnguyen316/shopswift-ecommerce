@@ -17,8 +17,6 @@ const Hero = () => {
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       className="my-10 h-[344px] bg-black text-white"
     >
       <SwiperSlide className="block h-full w-full object-cover text-center">

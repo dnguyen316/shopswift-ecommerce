@@ -2,11 +2,10 @@
 
 import React from "react";
 
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import type { SwiperProps } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import ProductCard from "../product-card/product-card";
 import { useCustomCarousel } from "../custom-carousel/create-context";
 
 interface CustomCarouselProps extends SwiperProps {
@@ -14,16 +13,17 @@ interface CustomCarouselProps extends SwiperProps {
 }
 
 const CustomCarousel = (props: CustomCarouselProps) => {
-  const { children } = props;
+  const { children, ...rest } = props;
   const { setSwiper } = useCustomCarousel();
 
   return (
     <Swiper
       slidesPerView={"auto"}
       spaceBetween={30}
-      modules={[Navigation]}
+      modules={[Navigation, Pagination]}
       className="mySwiper"
       onSwiper={(swiper) => setSwiper(swiper)}
+      {...rest}
     >
       {children}
     </Swiper>

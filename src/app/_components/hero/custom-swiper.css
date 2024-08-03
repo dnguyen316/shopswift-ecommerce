@@ -3,5 +3,5 @@
   @apply h-3 w-3;
 }
 .swiper-pagination-bullet-active {
-  @apply border border-white bg-secondary-3 text-primary-1;
+  @apply border border-white bg-secondary text-primary-1;
 }

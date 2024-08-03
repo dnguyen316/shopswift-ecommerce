@@ -4,6 +4,12 @@ import { CategoriesIconList } from "@/app/components/icons";
 import crypto from "crypto";
 import Link from "next/link";
 
+import CustomCarouselProvider from "../custom-carousel/create-context";
+import CustomSlideButton from "../product-list/custom-slide-button";
+import CustomCarousel, {
+  CustomSlide,
+} from "../custom-carousel/custom-carousel";
+
 import "./categories-list.styles.css";
 
 const categoriesList = [
@@ -43,23 +49,44 @@ const categoriesList = [
     name: "Gaming",
     url: "categories/gaming",
   },
+  {
+    id: crypto.randomBytes(64).toString("hex"),
+    icon: "gamepad",
+    name: "Gaming",
+    url: "categories/gaming",
+  },
+  {
+    id: crypto.randomBytes(64).toString("hex"),
+    icon: "gamepad",
+    name: "Gaming",
+    url: "categories/gaming",
+  },
+  {
+    id: crypto.randomBytes(64).toString("hex"),
+    icon: "gamepad",
+    name: "Gaming",
+    url: "categories/gaming",
+  },
 ];
 
 const CategoriesList = () => {
   return (
-    <ul className="mt-[60px] flex items-center gap-[30px]">
-      {categoriesList.map((item) => (
-        <li key={item.id} className="">
-          <Link
-            href={item.url}
-            className="flex h-[145px] w-[170px] flex-col items-center justify-center gap-[16px] rounded-[4px] border-2 border-button/30 font-medium text-text-2 hover:border-secondary-2 hover:bg-secondary-2 hover:text-white"
-          >
-            {CategoriesIconList[item.icon as keyof typeof CategoriesIconList]}
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <CustomCarouselProvider>
+      <CustomSlideButton />
+      <CustomCarousel slidesPerView={5}>
+        {categoriesList.map((item) => (
+          <CustomSlide key={item.id}>
+            <Link
+              href={item.url}
+              className="flex h-[145px] flex-col items-center justify-center gap-[16px] rounded-[4px] border-2 border-button/30 font-medium text-text-2 hover:border-secondary-2 hover:bg-secondary-2 hover:text-white"
+            >
+              {CategoriesIconList[item.icon as keyof typeof CategoriesIconList]}
+              {item.name}
+            </Link>
+          </CustomSlide>
+        ))}
+      </CustomCarousel>
+    </CustomCarouselProvider>
   );
 };
 
