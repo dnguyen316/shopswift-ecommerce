@@ -53,7 +53,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ productInfo }) => {
         </CardTitle>
         <CardDescription>
           <div className="pb-2 text-[16px] font-medium text-secondary-2">
-            ${Math.floor((productInfo.price * productInfo.discount) / 100)}{" "}
+            $
+            {(
+              productInfo.price -
+              (productInfo.price * productInfo.discount) / 100
+            ).toFixed(2)}{" "}
             <span className="ml-3 inline-block text-button line-through decoration-1 opacity-[50%]">
               ${productInfo.price}
             </span>

@@ -41,6 +41,24 @@ export default async function Home() {
           >
             <CategoriesList />
           </SectionWrapper>
+
+          {/* Best Selling Products Section */}
+          <SectionWrapper
+            className="relative"
+            title="Best Selling Products"
+            subtitle="This Month"
+          >
+            <ProductList />
+          </SectionWrapper>
+
+          {/* Our Products Section */}
+          <SectionWrapper
+            className="relative"
+            title="Explore Our Products"
+            subtitle="Our Products"
+          >
+            <ProductList />
+          </SectionWrapper>
         </main>
       </div>
     </HydrateClient>
