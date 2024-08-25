@@ -73,9 +73,9 @@ const CategoriesList = () => {
   return (
     <CustomCarouselProvider>
       <CustomSlideButton />
-      <CustomCarousel slidesPerView={5}>
+      <CustomCarousel slidesPerView={6}>
         {categoriesList.map((item) => (
-          <CustomSlide key={item.id}>
+          <CustomSlide className="w-[170px]" key={item.id}>
             <Link
               href={item.url}
               className="flex h-[145px] flex-col items-center justify-center gap-[16px] rounded-[4px] border-2 border-button/30 font-medium text-text-2 hover:border-secondary-2 hover:bg-secondary-2 hover:text-white"

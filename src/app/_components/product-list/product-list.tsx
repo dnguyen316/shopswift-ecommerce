@@ -16,7 +16,7 @@ const ProductList = () => {
   return (
     <CustomCarouselProvider>
       <CustomSlideButton />
-      <CustomCarousel slidesPerView={6}>
+      <CustomCarousel className="w-[270px]" slidesPerView={4}>
         {productItem.map((item) => (
           <CustomSlide key={item._id}>
             <ProductCard productInfo={item} />

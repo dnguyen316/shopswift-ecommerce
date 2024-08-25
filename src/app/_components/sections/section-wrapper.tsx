@@ -19,7 +19,7 @@ const SectionWrapper = React.forwardRef<
 >(({ className, title, subtitle, children, ...props }, ref) => {
   return (
     <section
-      className={cn("mb-[70px] mt-[70px]", className)}
+      className={cn("container mb-[70px] mt-[70px]", className)}
       ref={ref}
       {...props}
     >
