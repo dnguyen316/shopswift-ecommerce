@@ -8,7 +8,7 @@ const BestSellerSection = () => {
       title="Best Selling Products"
       subtitle="This Month"
     >
-      <ProductList />
+      <ProductList actionButton="view-all" />
     </SectionWrapper>
   );
 };
