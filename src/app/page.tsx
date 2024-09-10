@@ -5,6 +5,7 @@ import FlashSalesSection from "./_components/sections/flash-sales";
 import CategorySection from "./_components/sections/category";
 import BestSellerSection from "./_components/sections/best-seller";
 import OurProductSection from "./_components/sections/out-products";
+import BannerSection from "./_components/sections/banner";
 
 export default async function Home() {
   return (
@@ -27,6 +28,9 @@ export default async function Home() {
 
         {/* Best Selling Products Section */}
         <BestSellerSection />
+
+        {/* Promotion Banner */}
+        <BannerSection />
 
         {/* Our Products Section */}
         <OurProductSection />

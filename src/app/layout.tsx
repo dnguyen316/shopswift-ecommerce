@@ -7,6 +7,7 @@ import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
 import TopNav from "./_components/top-nav/top-nav";
 import { Suspense } from "react";
+import QueryProvider from "./providers/query-client-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,10 +34,12 @@ export default function RootLayout({
     >
       <body>
         <TRPCReactProvider>
-          <Suspense>
-            <TopNav />
-            {children}
-          </Suspense>
+          <QueryProvider>
+            <Suspense fallback={<></>}>
+              <TopNav />
+              {children}
+            </Suspense>
+          </QueryProvider>
         </TRPCReactProvider>
       </body>
     </html>

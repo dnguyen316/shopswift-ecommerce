@@ -8,8 +8,8 @@ interface SectionWrapperProps
     React.HTMLAttributes<HTMLElement>,
     HTMLElement
   > {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   children: React.ReactNode;
 }
 
@@ -23,10 +23,12 @@ const SectionWrapper = React.forwardRef<
       ref={ref}
       {...props}
     >
-      <div className="mb-6 flex items-center gap-[10px]">
-        <span className="bo inline-block h-[40px] w-[20px] rounded-sm bg-secondary-2"></span>
-        <h3 className="font-semibold text-secondary-2">{subtitle}</h3>
-      </div>
+      {subtitle && (
+        <div className="mb-6 flex items-center gap-[10px]">
+          <span className="bo inline-block h-[40px] w-[20px] rounded-sm bg-secondary-2"></span>
+          <h3 className="font-semibold text-secondary-2">{subtitle}</h3>
+        </div>
+      )}
       <h2 className="inline-block text-4xl font-semibold leading-[48px] tracking-wide text-text-2">
         {title}
       </h2>
