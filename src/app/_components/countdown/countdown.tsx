@@ -23,8 +23,8 @@ const Countdown = ({ endTime }: CountdownProps) => {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
@@ -51,14 +51,19 @@ const Countdown = ({ endTime }: CountdownProps) => {
     }
 
     timerComponents.push(
-      <span key={interval}>
-        {timeLeft[interval as keyof typeof timeLeft]} {interval}{" "}
-      </span>,
+      <div
+        className="flex h-[62px] w-[62px] flex-col items-center justify-center rounded-full bg-primary-1 text-center font-semibold text-text-2"
+        key={interval}
+      >
+        {timeLeft[interval as keyof typeof timeLeft]}
+
+        <span className="text-[11px] font-normal capitalize">{interval}</span>
+      </div>,
     );
   });
 
   return (
-    <div>
+    <div className="flex gap-[24px] text-white">
       {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
     </div>
   );

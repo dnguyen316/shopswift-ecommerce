@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
+import Link from "next/link";
 import Countdown from "../countdown/countdown";
+import { CldImage } from "next-cloudinary";
 
 interface PromotionBannerProps {
   subtitle: string; // Short description or label for the banner
@@ -20,27 +22,47 @@ interface PromotionBannerProps {
   };
   theme: {
     backgroundColor: string; // Background color of the banner
-    textColor: string; // Text color
-    buttonColor: string; // Button color
+    subtitle: string; // Text color
+    title: string; // Text color
+    button: {
+      background: string;
+      text: string;
+    }; // Button color
   };
 }
 
 const PromotionBanner = ({ data }: { data: PromotionBannerProps }) => {
   return (
-    <div style={{ backgroundColor: data.theme.backgroundColor }}>
-      <p style={{ color: data.theme.textColor }}>{data.subtitle}</p>
-      <h1 style={{ color: data.theme.textColor }}>{data.title}</h1>
-      {data.timer.display && <Countdown endTime={data.timer.endTime} />}
-      <a
-        href={data.action.url}
-        style={{ backgroundColor: data.theme.buttonColor }}
-      >
-        {data.action.text}
-      </a>
+    <div
+      className={`flex h-[500px] px-[50px] py-[69px]`}
+      style={{ backgroundColor: data.theme.backgroundColor }}
+    >
+      <div>
+        <h2 className="mb-[32px]" style={{ color: data.theme.subtitle }}>
+          {data.subtitle}
+        </h2>
+        <h1
+          className="mb-[32px] text-[48px] font-semibold leading-[60px]"
+          style={{ color: data.theme.title }}
+        >
+          {data.title}
+        </h1>
+        {data.timer.display && <Countdown endTime={data.timer.endTime} />}
+        <Link
+          href={data.action.url}
+          style={{
+            backgroundColor: data.theme.button.background,
+            color: data.theme.button.text,
+          }}
+          className="button mt-[40px] flex h-[56px] w-[171px] items-center justify-center rounded-[4px] text-center"
+        >
+          {data.action.text}
+        </Link>
+      </div>
       <a href={data.banner.linkUrl}>
-        <Image
-          width={600}
-          height={420}
+        <CldImage
+          width={800}
+          height={520}
           src={data.banner.imageUrl}
           alt={data.banner.altText}
         />

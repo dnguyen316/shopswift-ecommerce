@@ -11,13 +11,17 @@ export const promotionBannerData = {
     text: "Buy Now!", // Text for the button or link
   },
   banner: {
-    imageUrl: "", // URL for the banner image
+    imageUrl: "sfcbbvpy6hpzlaosn2jl.png", // URL for the banner image
     altText: "JBL Speaker", // Alt text for accessibility
     linkUrl: "https://google.com", // URL the banner links to
   },
   theme: {
     backgroundColor: "#000", // Background color of the banner
-    textColor: "#FFF", // Text color
-    buttonColor: "#00FF00", // Button color
+    subtitle: "#00FF66", // Text color
+    title: "#ffffff",
+    button: {
+      background: "#00FF66",
+      text: "#ffffff",
+    }, // Button color
   },
 };
